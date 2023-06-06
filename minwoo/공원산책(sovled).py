@@ -1,4 +1,6 @@
 # 요즘.. 정말 많이나오는 brute force (완전탐색)... shxt....
+
+# ref : https://windy7271.tistory.com/entry/PythonLV1%EA%B3%B5%EC%9B%90-%EC%82%B0%EC%B1%85
 def solution(park, routes):
 
     answer = []
