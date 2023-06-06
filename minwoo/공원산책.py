@@ -1,1 +1,0 @@
-# 공원산책 : https://school.programmers.co.kr/learn/courses/30/lessons/172928?language=python3
