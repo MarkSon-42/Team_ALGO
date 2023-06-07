@@ -8,7 +8,6 @@ def isMove(park, position, op, cnt):
     # n X m 의 격자
     n, m = len(park[0]), len(park)
     temp = []
-    
     # 1. 현재 위치에서 주어진 방향으로 이동할 때 공원을 벗어나는지?
     if op == 'N':
         if (position[0] - cnt < 0 or position[0] - cnt >= m):
@@ -36,12 +35,11 @@ def isMove(park, position, op, cnt):
             if park[position[0]][i] == 'X':
                 return False
     return True
-
 def solution(park, routes):
     answer = []
     # n X m 의 격자
     n, m = len(park[0]), len(park)
-    
+
     # 2. S를 찾을때까지 2중 for문 돌다가, 찾으면 좌표를 저장하기
     start = []
     for i in range(n):
@@ -67,5 +65,4 @@ def solution(park, routes):
                 start = [start[0], start[1]-cnt]
     # 4. 마지막 답 return
     return start
-
 solution(["SOO","OOO","OOO"], 	["E 2","S 2","W 1"])

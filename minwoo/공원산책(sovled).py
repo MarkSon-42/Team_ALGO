@@ -2,7 +2,6 @@
 
 # ref : https://windy7271.tistory.com/entry/PythonLV1%EA%B3%B5%EC%9B%90-%EC%82%B0%EC%B1%85
 def solution(park, routes):
-
     answer = []
     for i in range(len(park)):
         if 'S' in park[i]:  # 'S'를 찾아서 초기 위치를 answer에 저장
@@ -58,10 +57,8 @@ def solution(park, routes):
             obstacles = []
             for i in range(loc, answer[0]):
                 obstacles.append(park[i][answer[1]])
-
             if 'X' in obstacles:
                 continue
             else:
                 answer[0] = loc
-
     return answer

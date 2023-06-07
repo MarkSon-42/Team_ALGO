@@ -8,8 +8,9 @@ def solution(park, routes):
                 grid[i][j] = 1
             elif park[i][j] == "S": # S 시작점을 현재 위치로 초기화
                 current_row, current_col = i, j
-    
+
     dirs = {"N":(-1,0), "S":(1,0), "E":(0,1), "W":(0,-1)} # 동서남북 방향 정의
+
     for route in routes:
         direction, distance = route.split() # 방향, 거리 받기
         dir_row, dir_col = dirs[direction] 
