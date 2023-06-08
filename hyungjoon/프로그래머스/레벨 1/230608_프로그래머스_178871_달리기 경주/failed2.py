@@ -24,5 +24,4 @@ def solution(players, callings):
     
     return answer
 
-
 solution(["mumu", "soe", "poe", "kai", "mine"], ["kai", "kai", "mine", "mine"])
