@@ -1,3 +1,5 @@
+# 눈 썩는다 눈 썩어
+
 def solution(survey, choices):
     help = [0, 0, 0, 0]
 

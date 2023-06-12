@@ -33,3 +33,16 @@ def solution(wallpaper):
 
 #  한번 틀린 코드 -> return [lux, luy, rdx, rdy]
 #  좌표와 배열 칸은 다르다. 이를 고려하지 않고 출력해서 틀렸었음...
+
+
+def solution2(wallpaper):
+    a, b = [], []
+    for i in range(len(wallpaper)):
+        for j in range(len(wallpaper[i])):
+            if wallpaper[i][j] == "#":
+                a.append(i)
+                b.append(j)
+    return [min(a), min(b), max(a) + 1, max(b) + 1]
+
+# 일단 #찍히는 좌표를 다 밧아서 마지막에 처리하는게 비교연산을 덜해서 더욱 효율적인 코드인듯
+
