@@ -1,3 +1,9 @@
+'''
+문제 : 달리기 경주
+난이도 : 레벨 1
+링크 : https://school.programmers.co.kr/learn/courses/30/lessons/178871
+'''
+
 def solution(players, callings):
     answer = []
     # 1. 선수:등수 로 만들어진 map과 등수:선수 로 만들어진 map을 만든다.
