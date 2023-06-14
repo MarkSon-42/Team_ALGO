@@ -25,4 +25,5 @@ def solution(s, skip, index):
     
     return answer
 
-solution('happy',"wbqd",5)
+solution('aukks',"wbqd",5)
+
