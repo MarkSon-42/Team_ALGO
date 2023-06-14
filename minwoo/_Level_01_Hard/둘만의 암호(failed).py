@@ -21,7 +21,19 @@ def solution2(s, skip, index):
     l = len(a_to_z)
 
     dic_alpha = {alpha:idx for idx, alpha in enumerate(a_to_z)}
-
+    # 딕셔너리 컴프리헨션
+    # enumerate(a_to_z)에서 반환되는 각 원소를 idx와 alpha 변수에 할당하면서 반복문을 실행
+    # alpha:idx는 딕셔너리의 키-값
+    #
+    #
+    #     위와 같은 식 (일반적인 반복문 버전)
+    #
+    #
+    # alpha = 'abcdefghijklmnopqrstuvwxyz'
+    # dic_alpha = {}
+    # for i in range(len(alpha)):
+    #     if alpha[i] in a_to_z:
+    #         dic_alpha[alpha[i]] = i
     for i in s:
         result += a_to_z[(dic_alpha[i] + index) % l]
 
