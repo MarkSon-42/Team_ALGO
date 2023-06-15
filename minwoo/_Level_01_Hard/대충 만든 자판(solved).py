@@ -8,6 +8,6 @@ def solution(keymap, targets):
     # keymap의 각 행(row)을 i로 순회, 각 열(col)을 j로 순회.
     for i in range(len(keymap)):
         for j in range(len(keymap[i])):
-            char = keymap[i][j]  # 현재 위치의 문자를 char에 저장.
+            char = keymap[iç][j]  # 현재 위치의 문자를 char에 저장.
             if char not in key_dict:
                 key_dict[char] = (j + 1)  # key
