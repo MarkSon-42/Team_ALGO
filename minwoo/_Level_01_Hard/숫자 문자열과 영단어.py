@@ -23,3 +23,12 @@ def solution(s):
     for key, value in num_words.items():
         answer = answer.replace(key, value)
     return int(answer)
+
+
+def solution2(s):
+    words = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
+
+    for i in range(len(words)):
+        s = s.replace(words[i], str(i))
+
+    return int(s)
