@@ -1,0 +1,20 @@
+def solution(n, arr1, arr2):
+    answer = []
+    arr1Bin = []
+    arr2Bin = []
+
+    for i in range(n):
+        arr1Bin.append(bin(arr1[i])[2:]) # [2:]은 0b를 제외시키기 위함
+        arr2Bin.append(bin(arr2[i])[2:])
+        arr1Bin[i] = ('0' * (n - len(arr1Bin[i]))) + arr1Bin[i]
+        arr2Bin[i] = ('0' * (n - len(arr2Bin[i]))) + arr2Bin[i]
+    
+        tmp = ''
+        for p in range(n):
+            if arr1Bin[i][p] == '1' or arr2Bin[i][p] == '1':
+                tmp += '#' # arr1Bin과 arr2Bin 둘 중 하나라도 '1'이 포함된 경우
+            elif arr1Bin[i][p] == '0' and arr2Bin[i][p] == '0': 
+                tmp += ' ' # 그렇지 않은 경우
+        answer.append(tmp)
+        
+    return answer
