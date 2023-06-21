@@ -10,14 +10,17 @@ def solution(nums):
     brute_force = []  # 가능한 조합의 합을 저장할 리스트
 
     # 세 수를 모두 더한 후 brute_force 리스트에 저장
+
     for i in range(len(nums)):
         for j in range(i+1, len(nums)):
             for k in range(j+1, len(nums)):
                 brute_force.append(nums[i] + nums[j] + nums[k])
 
+
     # brute_force 리스트의 각 요소에 대해 소수 여부 확인
     for m in brute_force:
         if primeNum(m) == True:
             cnt += 1  # 소수이면 cnt 변수 증가
+
 
     return cnt

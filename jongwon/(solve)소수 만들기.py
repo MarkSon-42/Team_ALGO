@@ -5,6 +5,7 @@ def check(a, b, c): # 소수 판별
             return False 
     return True 
 
+
 def solution(nums):
     result = 0
     for i in range(0, len(nums) - 2): # 삼중 반복문으로 숫자들 중 3개 뽑는 로직 구현
