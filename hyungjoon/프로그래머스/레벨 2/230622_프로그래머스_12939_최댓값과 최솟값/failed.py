@@ -4,6 +4,7 @@ def solution(s):
     
     minNum, maxNum = sys.maxsize, -sys.maxsize
     stack = []
+    # split 안쓰고 풀어보고 싶었는데 안됐당
     for i in s:
         if i == ' ':
             continue
