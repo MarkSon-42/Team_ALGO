@@ -26,3 +26,5 @@ def solution(wallpaper):
     answer = [lx, ly, rx, ry]
     
     return answer
+
+solution([".#...", "..#..", "...#."])

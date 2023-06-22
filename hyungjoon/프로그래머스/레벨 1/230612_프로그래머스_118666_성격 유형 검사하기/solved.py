@@ -46,3 +46,5 @@ def solution(survey, choices):
         answer += 'A' if score["A"] > score["N"] else 'N'
     
     return answer
+
+solution(["AN", "CF", "MJ", "RT", "NA"], [5, 3, 2, 7, 5])
