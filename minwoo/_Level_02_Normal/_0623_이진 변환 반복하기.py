@@ -1,5 +1,4 @@
 def solution(s):
-
     zero_cnt = 0
     trans_cnt = 0
 
@@ -14,19 +13,14 @@ def solution(s):
 
     return [trans_cnt, zero_cnt]
 
-
-
 def solution_01(s):
     a, b = 0, 0
-
     while s != '1':
         a += 1
         num = s.count('1')
         b += len(s) - num
         s = bin(num)[2:]
     return [a, b]
-
-
 
 from collections import Counter
 def solution_02(s):
