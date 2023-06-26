@@ -10,4 +10,4 @@ def solution(s):
                 return False
             else:
                 stack.pop()
-    return stack==[]
+    return stack == []
