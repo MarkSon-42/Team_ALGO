@@ -18,7 +18,7 @@ def solution(n):
         return 1
     if n not in F: # F 딕셔너리에 n 계산값이 없을 때
         F[n] = F(n-1) + F(n-2)
-    return F[n]
+    return F[n] % 1234567
 
 # 기본 재귀 방식
 def solution(n): 
@@ -26,4 +26,4 @@ def solution(n):
         return 0
     elif n == 1:
         return 1
-    return solution(n-1) + solution(n-2) # 하위 문제로 나눠서 구하기
+    return (solution(n-1) + solution(n-2)) % 1234567 # 하위 문제로 나눠서 구하기
