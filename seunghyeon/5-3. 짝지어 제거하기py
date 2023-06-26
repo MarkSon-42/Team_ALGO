@@ -1,0 +1,13 @@
+def solution(s):
+    stk = []
+    for i in range(len(s)):
+        if not stk:
+            stk.append(s[i])
+        else:
+            if s[i] == stk[-1]:
+                stk.pop()
+            else:
+                stk.append(s[i])
+
+    if stk : return 0
+    return 1
