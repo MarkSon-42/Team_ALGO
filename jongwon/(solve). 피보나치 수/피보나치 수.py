@@ -31,7 +31,7 @@ def solution(n):
 
 
 
-# 피보나치 수열
+# 피보나치 수열 정리(DP 3단계 방법 : 재귀 -> Top-down -> Bottom-up 이러한 단계로 진행)
 
 def fibo(n): 
     if n == 1 or n == 2: # base case
