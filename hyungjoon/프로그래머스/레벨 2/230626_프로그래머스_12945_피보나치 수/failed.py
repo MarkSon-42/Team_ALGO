@@ -9,5 +9,4 @@ def recursion(n):
     return recursion(n-2) + recursion(n-1)
 
 def solution(n):
-    
     return recursion(n) % 1234567

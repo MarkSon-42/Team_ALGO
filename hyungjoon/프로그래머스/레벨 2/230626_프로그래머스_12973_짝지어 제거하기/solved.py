@@ -17,4 +17,4 @@ def solution(s):
 
     return 0 if stack else 1
 
-solution('cdcd')
+solution('abba')

@@ -10,4 +10,6 @@ def solution(n):
         cntI = format(i, 'b').count('1')
         if cntI == cntN:
             return i
+        
+solution(78)
     
