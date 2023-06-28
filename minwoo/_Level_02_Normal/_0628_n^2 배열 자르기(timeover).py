@@ -1,3 +1,5 @@
+# 시간초과 날것을 뻔히 알지만.. 그래도 시도한 흔적 남기기용
+
 def solution(n, left, right):
     answer = []
 
