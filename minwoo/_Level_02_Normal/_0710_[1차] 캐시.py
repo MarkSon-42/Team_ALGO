@@ -32,3 +32,7 @@ def solution(cacheSize, cities):
         return len(cities) * 5
 
     return answer
+
+
+#  다양한 풀이를 구경하고 있지만, 우선 캐싱을 코드로 구현하는 연습을 하는게 중요하고
+#  자주 쓰이는 자료구조인 데크에 대해서 완벽하게 이해하고 학습하고 코드 구현 연습부터 하는게 먼저일 것이다..
