@@ -1,3 +1,8 @@
+'''
+문제 : 택배 배달과 수거하기
+난이도 : 레벨 2
+링크 : https://school.programmers.co.kr/learn/courses/30/lessons/150369
+'''
 def solution(cap, n, deliveries, pickups):
     answer = 0
     # 0. n = 100,000 이라 완탐은 안됨, 그리디 문제
