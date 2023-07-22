@@ -22,7 +22,7 @@ def solution(picks, minerals):
     # 반례 : https://school.programmers.co.kr/questions/50674
     # 이걸 처음부터 내가 캘 수 있는 광물까지만 잘라놓고 시작해버리면됨
     minerals = deque(minerals[:5*sum(picks)])
-    digList = []
+    digList = [] 
     while minerals:
         # 5개씩 작업할 리스트를 생성해준다.
         workList = []
