@@ -10,8 +10,6 @@
 
 # 광물을 다이아몬드, 철, 돌 순서대로 정렬한다.
 
-
-
 # 1. 곡괭이의 수를 구한다.
 def solution(picks, minerals):
     answer = 0
