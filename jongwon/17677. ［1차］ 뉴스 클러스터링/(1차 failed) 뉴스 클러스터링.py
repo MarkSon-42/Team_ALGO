@@ -4,7 +4,7 @@ def solution(str1, str2):
     # len(intersection) , len(union) = 0, 0 => result = 1
     # 집합 A와 집합 B가 모두 공집합일 경우에는 나눗셈이 정의되지 않으니 따로 J(A, B) = 1로 정의한다.
     
-    # 문자열 공백 제거
+    # 문자열 소문자로 변경
     str1 = str1.lower()
     str2 = str2.lower()
     
