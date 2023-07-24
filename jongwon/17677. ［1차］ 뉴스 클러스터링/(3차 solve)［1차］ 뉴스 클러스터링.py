@@ -1,6 +1,6 @@
 def solution(str1, str2):    
     
-    # 문자열 공백 제거
+    # 문자열 소문자로 변경
     str1 = str1.lower()
     str2 = str2.lower()
     
