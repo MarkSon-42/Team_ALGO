@@ -6,7 +6,8 @@ def solution(str1, str2):
     str1_low = str1.lower()
     str2_low = str2.lower()
 
-    str1_lst, str2_lst = [], []
+    str1_lst = []
+    str2_lst = []
     for i in range(len(str1_low) - 1):
         if str1_low[i].isalpha() and str1_low[i+1].isalpha():
             str1_lst.append(str1_low[i] + str1_low[i + 1])
