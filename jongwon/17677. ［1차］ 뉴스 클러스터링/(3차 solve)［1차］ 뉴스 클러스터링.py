@@ -32,7 +32,7 @@ def solution(str1, str2):
                 compare_4.remove(k)
                 
 
-            
+    
     # 합집합 : 교집합을 뺀 1,2 만이 가지고 있는 원소와 교집합의 합
     un = inter + compare_3 + compare_4
     
