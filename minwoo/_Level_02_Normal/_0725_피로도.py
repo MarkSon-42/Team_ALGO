@@ -11,6 +11,8 @@ def solution(k, dungeons):
     d_num = len(dungeons)
     answer = []
 
+    # 던전들의 모든 가능한 순열에 대해서 반복
+    # permutations()
     for per in permutations(dungeons, d_num):
         limit = k
         cnt = 0
