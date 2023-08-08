@@ -14,13 +14,13 @@ def solution(dirs):
         if dirs[i] == 'U':
             loc = (loc[0] + 1, loc[1])
             road_list.append(loc)
-        if dirs[i] == 'D':
+        elif dirs[i] == 'D':
             loc = (loc[0] - 1, loc[1])
             road_list.append(loc)
-        if dirs[i] == 'L':
+        elif dirs[i] == 'L':
             loc = (loc[0], loc[1] - 1)
             road_list.append(loc)
-        if dirs[i] == 'R':
+        elif dirs[i] == 'R':
             loc = (loc[0], loc[1] + 1)
             road_list.append(loc)
 
