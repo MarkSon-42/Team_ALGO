@@ -25,7 +25,7 @@ def solution(dirs):
         if nx < -5 or nx > 5 or ny < -5 or ny > 5:
             continue
         
-        if str([x, y, nx, ny]) or str([nx, ny, x, y]) not in went:
+        if str([x, y, nx, ny]) not in went or str([nx, ny, x, y]) not in went:
             answer += 1
             went[str([x, y, nx, ny])] = 1
             went[str([nx, ny, x, y])] = 1
