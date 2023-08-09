@@ -19,5 +19,5 @@ def solution(dirs):
         if d == 'L' and x > -5:
             visit.add(((x - 1, y), (x, y)))
             x -= 1
-
+            
     return len(visit)
