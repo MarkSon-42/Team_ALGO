@@ -5,7 +5,7 @@ def solution(skill, skill_trees):
     answer = 0
     for tree in skill_trees:
         queue = deque(skill)
-        whether = True # 이렇게 flag를 설정해두면 되는 일이였다...
+        whether = True  # 이렇게 flag를 설정해두면 되는 일이였다...
 
         for s in tree:
             if s not in queue:
