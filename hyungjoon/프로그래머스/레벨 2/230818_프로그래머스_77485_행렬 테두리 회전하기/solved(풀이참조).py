@@ -48,6 +48,7 @@ def solution(rows, columns, queries):
             test = grid[r1][i-1]
             grid[r1][i] = test
             smallest = min(smallest, test)
+        grid[r1][c1+1] = temp
         answer.append(smallest)
     return answer
 print(solution(6, 6,[[2,2,5,4],[3,3,6,6],[5,1,6,3]]))
