@@ -10,7 +10,6 @@ def solution(bridgeLength, weight, truckWeights):
     
     # 다리 역할을 하는 큐
     bridge = deque()
-    
     # 초단위로 계속 작업을 수행한다.
     while True:
         if len(complete) == n:
