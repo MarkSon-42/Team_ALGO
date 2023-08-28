@@ -11,12 +11,15 @@ def solution(arr):
         point = arr[x][y]
         for i in range(x,x+l):
             for j in range(y, y+l):
-                if point != arr[i][j]:
+                if point != arr[i][j]: # 값이 다르다면, 현재 영역을 4개로 나누어 재귀 호출
                     recur(arr,x,y,l//2)
                     recur(arr,x+l//2,y,l//2)
                     recur(arr,x,y+l//2,l//2)
                     recur(arr,x+l//2,y+l//2,l//2)
                     return
         answer[point] += 1
-    recur(arr,0,0,l)
+
+
+    recur(arr,0,0,l) # ... 이렇게 호출을 해줘야 한다.
+
     return answer
