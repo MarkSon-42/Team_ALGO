@@ -4,7 +4,6 @@
 # 작은 순서대로 k개 제거 ?
 # 맨 앞 숫자 (앞자리일수록 제일 커야함)
 
-
 def solution(number, k):
     number = list(number)
     result = [number.pop(0)]
