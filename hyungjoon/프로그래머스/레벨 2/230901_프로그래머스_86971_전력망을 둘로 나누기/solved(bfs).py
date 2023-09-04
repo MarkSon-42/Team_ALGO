@@ -13,7 +13,7 @@ def bfs(start, graph, visited, isCut):
         v = q.popleft()
 
         for i in graph[v]:
-            if not isCut[v][i] and not visited[v]:
+            if not isCut[v][i] and not visited[i]:
                 q.append(i)
                 visited[i] = True
                 cnt += 1
