@@ -1,3 +1,5 @@
+# 촌수 개념은 사실 dfs였다... ㄷㄷ
+
 def dfs(v):
     visited[v] = True
     for i in graph[v]:
