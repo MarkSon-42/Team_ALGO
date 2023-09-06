@@ -8,6 +8,29 @@
 N, M, V = map(int, input().split())
 
 g = [[False] * (N + 1) for _ in range(N + 1)]
-print(g)
 
+
+# 모든 간선에 대해 graph 양방향 초기화
 for _ in range(M):
+    a, b = map(int, input().split())
+    g[a][b] = True
+    g[b][a] = True
+
+# 방문노드 초기화
+
+visited_dfs = [False] * (N + 1)
+visited_bfs = [False] * (N + 1)
+def dfs(V):
+    visited_dfs[V] = True
+    print(V, end = " ")
+    for i in range(1, N + 1):
+        if not visited_dfs[i] and g[V][i]:
+            dfs(i)
+
+def bfs(V):
+    pass
+
+
+dfs(V)
+print()
+bfs(V)
