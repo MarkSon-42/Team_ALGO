@@ -1,40 +1,13 @@
-from collections import deque
+# BOJ 1260
+
+# 단, 방문할 수 있는 정점이 여러 개인 경우에는 정점 번호가 작은 것을 먼저 방문하고,
+# 더 이상 방문할 수 있는 점이 없는 경우 종료한다.
+
+# dfs 먼저 구현해보기
 
 N, M, V = map(int, input().split())
 
-graph = [[False] * (N + 1) for _ in range(N + 1)]
+g = [[False] * (N + 1) for _ in range(N + 1)]
+print(g)
 
 for _ in range(M):
-    a, b = map(int, input().split())
-    graph[a][b] = True  # 양방향을 초기화
-    graph[b][a] = True
-
-visited_dfs = [False] * (N + 1)  # dfs 방문기록 초기화
-visited_bfs = [False] * (N + 1)  # bfs 방문기록 초기화
-
-def dfs(V):
-    visited_dfs[V] = True  # V는 시작노드. 시작 노드를 방문처리
-    print(V, end = " ")
-    for i in range(1, N + 1):
-        if not visited_dfs[i] and graph[V][i]:
-            dfs(i)
-
-
-
-def bfs(V):
-    queue = deque([V])
-    visited_bfs[V] = True
-    while queue:  # queue가 빌 때 까지
-        V.queue.popleft()
-        print(V, end=" ")
-        for i in range(1, N + 1):
-            if not visited_bfs[i] and graph[V][i]:
-                queue.append(i)
-                visited_bfs[i] = True
-
-
-
-dfs(V)
-print()
-bfs(V)
-
