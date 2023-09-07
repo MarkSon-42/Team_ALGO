@@ -28,6 +28,7 @@ def bfs(v):
         for i in graph[x]:
             if not visited[i]:
                 q.append(i)
+                visited[i] = True
 
 cnt = 0
 # n번 노드를 방문해서 집합이 총 몇개인지 알아낸다.
