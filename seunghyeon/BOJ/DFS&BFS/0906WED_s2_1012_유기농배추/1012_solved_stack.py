@@ -14,9 +14,9 @@ def find_earthworms_num(x, y):
     stack = deque([(x, y)])
 
     while stack:
-        cx, cy = stack.pop()
+        now_x, now_y = stack.pop()
         for i in range(4):
-            new_x, new_y = cx + move_x[i], cy + move_y[i]
+            new_x, new_y = now_x + move_x[i], now_y + move_y[i]
             if field[new_x][new_y] == 1 and not visited[new_x][new_y]:
                 visited[new_x][new_y] = True
                 stack.append((new_x, new_y))
