@@ -1,0 +1,34 @@
+# 정말 문제가 똑같다.
+
+from collections import deque
+import sys
+
+input = sys.stdin.readline
+
+N, M, K, X = map(int, input().split())
+graph = [[] for _ in range(N + 1)]  #  idx 맞추기 위해서 N + 1 개 생성
+
+for _ in range(M):
+    a, b = map(int, input().split())
+    graph[a].append(b)
+    # 단방향 그래프이기 때문에 양방향 초기화 할 필요 없음.
+
+distance = [-1] * (N + 1)
+distance[X] = 0
+
+q = deque([X])
+while q:
+    now = q.popleft()
+    for nd in graph[now]:
+        if distance[nd] == -1:
+            distance[nd] = distance[now] + 1
+            q.append(nd)
+
+check = False
+for i in range(1, N + 1):
+    if distance[i] == K:
+        print(i)
+        check = True
+
+if check == False:
+    print(-1)
