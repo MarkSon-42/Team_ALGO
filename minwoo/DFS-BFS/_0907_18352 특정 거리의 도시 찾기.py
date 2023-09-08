@@ -1,4 +1,4 @@
-# 정말 문제가 거의 똑같다. 바이러스 문제에서 방향만 다른? - 단방향 그래프, 양방향 그래프
+# 정말 문제가 거의 똑같다. 바이러스 문제에서 방향만 다른?
 
 from collections import deque
 import sys
@@ -14,13 +14,13 @@ for _ in range(M):
     # 단방향 그래프이기 때문에 양방향 초기화 할 필요 없음.
 
 distance = [0] * (N + 1)
-distance[X] = 0
+distyance[X] = 0
 
 q = deque([X])
 while q:
     now = q.popleft()
     for nd in graph[now]:
-        if distance[nd] == 0
+        if distance[nd] == 0:
             distance[nd] = distance[now] + 1
             q.append(nd)
 
