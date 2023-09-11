@@ -1,0 +1,2 @@
+- 2023.09.10.SUN
+  - about local/nonlocal/global variable
