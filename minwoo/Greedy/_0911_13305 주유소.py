@@ -16,7 +16,10 @@ min_val = roadway[0] * cost[0]
 
 min_cost = cost[0]
 
-for i in range(1, N):
+# IndexError ..
+
+# N -> N - 1로 해줘야 out of range 방지
+for i in range(1, N - 1):
     if min_cost > cost[i]:
         min_cost = cost[i]
     min_val += min_cost * roadway[i]
