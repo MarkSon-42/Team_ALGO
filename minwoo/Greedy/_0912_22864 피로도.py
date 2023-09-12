@@ -2,11 +2,8 @@
 # https://school.programmers.co.kr/learn/courses/30/lessons/87946
 A, B, C, M = map(int, input().split())
 
-
 ftg = 0
 work = 0
-
-A, B, C, M = map(int, input().split())
 
 for i in range(24):
     if ftg+A <= M:  # 피로도에 여유가 있을 시
