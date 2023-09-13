@@ -7,7 +7,7 @@ if __name__ == "__main__":
     for i in range(N):
         start, end = map(int, my_input().split())
         meetings.append([start, end])
-    meetings = sorted(meetings, key=lambda x: (x[1], x[0]))
+    meetings = sorted(meetings, key=lambda x: x[0])
     meetings = sorted(meetings, key=lambda x: x[1])
     # .sort(key = lambda x: (x[1], x[0]))
 
