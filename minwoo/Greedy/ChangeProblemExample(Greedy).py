@@ -1,0 +1,1 @@
+def greedy_change(coins, amount)
