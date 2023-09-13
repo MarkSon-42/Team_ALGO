@@ -1,1 +1,2 @@
-def greedy_change(coins, amount)
+def greedy_change(coins, amount):
+    pass
