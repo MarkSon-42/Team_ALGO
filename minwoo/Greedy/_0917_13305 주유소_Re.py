@@ -17,4 +17,5 @@ for i in range(1, n - 1):
         oil_price = oil_prices[i]
         minimum_price += oil_prices[i] * loads_length[i]
     else:
+        pass
 
