@@ -1,4 +1,5 @@
-# 그림그렸다
+# 그림그렸다. 문제 이해함. 근데 구현 너무 복잡.
+# 실버2, 정답률 28%..
 import sys
 input = sys.stdin.readline
 n, m = map(int, input().split())
