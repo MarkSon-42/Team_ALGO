@@ -15,3 +15,4 @@ duck_stack = [['']]
 for c in sounds:
     for i in range(5):
         if c == 'q':
+            pass
