@@ -34,9 +34,15 @@ if __name__ == "__main__":
 				if tmp == 1 and idx == 79:
 					rst_num.append('1')
 
-			len_rst_num = len(rst_num)
-			for c in range(len_rst_num):
-				if rst_num[len_rst_num-1-c] == '0':
+			# len_rst_num = len(rst_num)
+			# for c in range(len_rst_num):
+			# 	if rst_num[len_rst_num-1-c] == '0':
+			# 		rst_num.pop()
+			# 	else:
+			# 		break
+
+			while rst_num:
+				if rst_num[-1] == '0':
 					rst_num.pop()
 				else:
 					break

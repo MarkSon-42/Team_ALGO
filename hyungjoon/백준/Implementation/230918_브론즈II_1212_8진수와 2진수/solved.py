@@ -1,7 +1,7 @@
 '''
 문제 : 8진수와 2진수
 링크 : https://www.acmicpc.net/problem/1212
-소요시간 : 
+소요시간 : 5분
 '''
 import sys
 se = sys.stdin.readline
