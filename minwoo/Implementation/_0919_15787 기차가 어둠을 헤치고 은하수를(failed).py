@@ -40,3 +40,4 @@ for i in range(1, m + 1):  # 명령 개수만큼 반복문
 
 print(train_seat)
 
+# rotate()

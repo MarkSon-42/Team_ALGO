@@ -2,6 +2,7 @@
 # import sys
 #
 # input = sys.stdin.readline
+
 n = int(input())
 
 extension_name = []
@@ -13,6 +14,7 @@ for _ in range(n):
             extension_name.append(file_name[j+1:])
 
 extension_name.sort()
+
 cnt = {}
 
 for name in extension_name:
