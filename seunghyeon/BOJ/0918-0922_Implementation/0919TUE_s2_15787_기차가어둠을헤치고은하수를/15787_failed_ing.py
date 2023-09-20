@@ -47,3 +47,5 @@ if __name__ == "__main__":
 			# tuple은 hashable한 자료형이라서 1차원뿐만아니라 2차원 tuple에 set 함수를 적용해도 중복 제거가 됨
 			# 2차원 list에 set을 적용하려고 하면 TypeError: unhashable type: 'list'가 뜸
 			# 주의할 점: 2차원 리스트 내의 요소 중 '원소가 단 한 개 뿐인' 리스트는 tuple이 안돼서 string으로 바꿔야 함!
+
+	# 3,4번 명령에 대해서 deque사용하는 로직도 짜보자
