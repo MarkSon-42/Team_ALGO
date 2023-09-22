@@ -48,6 +48,7 @@ for _ in range(m):
         continue
     right.append(ladder)
 
+
 # 처음상태(ABCDE~~)에서 '??'직전 배열을 알기 위한 코드이다.
 # 앞에서 부터 하나씩 빼서 '-'이면 양 알파뱃의 위치를 바꾸어준다.
 while left:
@@ -74,3 +75,4 @@ for k in range(n - 1):
 if start != final:
     ans = ['x' for _ in range(n - 1)]
 print(''.join(ans))
+
