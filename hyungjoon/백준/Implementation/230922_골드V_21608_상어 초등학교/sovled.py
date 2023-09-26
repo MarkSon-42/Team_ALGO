@@ -54,7 +54,7 @@ for stu in students[1:]:
     # 좋아하는 애와 빈 자리 수는 많을수록 앞에 와야하고, 행과 열은 작을수록 앞에 와야하니, 정렬조건을 이렇게 하자
     able.sort(key=lambda x:(-x[0], -x[1], x[2], x[3]))
     # 정렬 후, 맨 앞에 있는 인덱스의 자리에 학생을 앉힌다.
-    grid[able[0][2]][able[0][3]] = stu[0]
+    grid[able[0][2]][able[0][3]] = stu
 
 answer = 0
 for i in range(n):
