@@ -29,7 +29,7 @@ if __name__ == "__main__":
 					f[0], f[1] = r, 1
 					is_there_empty = 0
 					break
-				else:
+				else:d
 					if f[1] <= min_recommend:
 						min_recommend = f[1]
 						min_recommends.append([f, tmp_idx])
@@ -43,6 +43,11 @@ if __name__ == "__main__":
 					del frames[min_recommends[0][1]]
 					frames.append([r, 1])
 
-	frames = sorted(frames, key=lambda x: x[0])
-	print(' '.join(map(str, [frame[0] for frame in frames])))
+	# frames = sorted(frames, key=lambda x: x[0])
+	rst_lst = []
+	for frame in frames:
+		if frame[0] != 0:
+			rst_lst.append(str(frame[0]))
+	rst_lst = sorted(rst_lst)
+	print(' '.join(rst_lst))
 	# print(frames[0][0], frames[1][0], frames[2][0])  # 왜 이렇게하면 그냥 틀렸습니다가 뜨는가?
