@@ -36,10 +36,12 @@ for i in range(1, n + 1):
     if name not in pocketmon:
         pocketmon[i] = name
 
+
 # 그냥 findname이 정수형이면 value를,
 # 문자열형이면 key를 리턴하면 안되나???
 # 구현을 못했는데 이렇게 구현해도 value로 key탐색하는데 시간이 오래걸려서 시간초과
 # 난다고 함
+
 for i in range(m):
     findname = input()
     if findname.isalpha() and findname in pocketmon:
