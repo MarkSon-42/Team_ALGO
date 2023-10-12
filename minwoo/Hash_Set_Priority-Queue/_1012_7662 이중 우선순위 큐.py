@@ -1,7 +1,7 @@
 # https://hongcoding.tistory.com/92
 
 # 도저히.. 문제는 이해가 되는거 구현을 못하겠음 ( 골 4 )
-# 38~41번라인 이해가 안간다.
+# 큐 구현인데.. 문제그대로
 
 
 import heapq
