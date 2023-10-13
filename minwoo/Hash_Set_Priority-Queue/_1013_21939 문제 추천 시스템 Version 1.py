@@ -1,4 +1,4 @@
-https://devlibrary00108.tistory.com/345
+# https://devlibrary00108.tistory.com/345
 
 import sys
 input = sys.stdin.readline
@@ -34,10 +34,12 @@ for _  in range(M):
         P = int(command[1])
         L = int(command[2])
         # 같은 번호의 다른 난이도 문제가 삽입되어 이미 죽은 문제인데 True로 나와 출력되는 것을 방지.
+
         while not in_list[-max_heap[0][1]]:
             heappop(max_heap)
         while not in_list[min_heap[0][1]]:
             heappop(min_heap)
+
         in_list[P] = True
         heappush(max_heap,[-L,-P])
         heappush(min_heap,[L,P])
