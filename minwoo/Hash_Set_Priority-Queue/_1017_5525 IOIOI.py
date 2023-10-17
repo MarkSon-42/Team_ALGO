@@ -1,4 +1,3 @@
-
 # 'IOI'를 찾으면 된다.
 
 import sys

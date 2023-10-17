@@ -12,6 +12,7 @@ S = input().rstrip()
 left, right = 0, 0
 answer = 0
 
+
 while right < M:
     if S[right:right + 3] == 'IOI':
         right += 2
@@ -22,3 +23,5 @@ while right < M:
         left = right = right + 1
 
 print(answer)
+
+#
