@@ -42,7 +42,7 @@ def execute_inst(prob_lst, inst_lst):
 			hq.heappush(max_heap, (-lev, -prob))
 		# [5] 문제 제거
 		elif inst[0] == "solved":
-			solved[int(inst[1])] += 1ㄷ
+			solved[int(inst[1])] += 1
 
 
 N = int(my_input())
@@ -56,3 +56,4 @@ execute_inst(problems, instructions)
 # additional
 	# https://velog.io/@becooq81/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0-BBST
 	# https://blog.naver.com/PostView.naver?blogId=jinhan814&logNo=222421203400
+	# heap 동작 과정: https://velog.io/@hyoda_mon/heap-%EA%B3%BC-python-heapq-%EB%AA%A8%EB%93%88
