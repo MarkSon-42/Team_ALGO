@@ -18,3 +18,4 @@ while len(cards) > 1:
     heapq.heappush(cards, smallest + nextsmallest)
 
 print(answer)
+
