@@ -1,5 +1,6 @@
 # score: 100
 # 이런 아이디어 생각하는 연습하기
+# two-pointer 방식으로도 풀어보기 (조금 더 빠름)
 
 import sys
 my_input = sys.stdin.readline
