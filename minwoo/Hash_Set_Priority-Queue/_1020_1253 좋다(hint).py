@@ -4,6 +4,8 @@
 
 # 두 수 요소를 연산해서 정답을 구하는 데 적절한 알고리즘 -> 투포인터
 
+# " 다른 수 두 개의 합"
+
 import sys
 input = sys.stdin.readline
 N = int(input())
@@ -12,7 +14,7 @@ arr.sort()
 
 result = 0
 for i, num in enumerate(arr):
-    temp = arr[:i]+arr[i+1:]
+    temp = arr[:i]+arr[i+1:]  # 반례 : " 다른 수 두 개의 합" 그래서 arr[i]가 아닌 arr[i+1]..
     left = 0
     right = len(temp) - 1
     while left < right:
