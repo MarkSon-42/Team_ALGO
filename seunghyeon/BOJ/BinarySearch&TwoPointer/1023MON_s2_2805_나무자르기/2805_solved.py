@@ -2,9 +2,7 @@ import sys
 my_input = sys.stdin.readline
 
 n, m = map(int, my_input().split())
-
 trees = list(map(int, my_input().split()))
-
 left, right = 0, max(trees)
 
 while left <= right:
