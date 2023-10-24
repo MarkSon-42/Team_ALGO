@@ -5,10 +5,14 @@ my_input = sys.stdin.readline
 
 t = int(my_input())
 k = int(my_input())
-coins = [list(map(int, my_input().split())) for _ in range(k)]
+coins = []
 
 result = [0] * (t + 1)
 result[0] = 1
+
+for _ in range(k):
+	p, n = map(int, input().split())
+	coins.append((p, n))
 
 for p, n in coins:
 	for i in range(t, 0, -1):
