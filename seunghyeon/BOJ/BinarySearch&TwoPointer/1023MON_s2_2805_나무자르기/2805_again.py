@@ -11,7 +11,7 @@ while s <= e:
 	for t in trees:
 		if t - m > 0:
 			now_sum += (t - m)
-	if now_sum >= M:
+	if now_sum >= M:  # 여기 부등호가 >로 해야할지 >=로 해야할지 생각을 잘 못했었음. 잘 생각하기.
 		s = m + 1
 	else:
 		e = m - 1
