@@ -11,7 +11,7 @@ n = int(se().rstrip())
 answer = 0
 
 heap = list(map(int, se().split()))
-# heapq.heapify(heap) 이거 쓰면 정렬이안됨.. 왜?
+heapq.heapify(heap) # 이거 쓰면 정렬이안됨.. 왜?
 heap.sort()
 
 for i in range(n):
