@@ -6,6 +6,7 @@ n, k = map(int, input().split())
 days = list(map(int, input().split()))
 
 # 누적 합 배열 생성
+
 prefix_sum = [0] * n
 prefix_sum[0] = days[0]
 for i in range(1, n):
@@ -17,6 +18,7 @@ for right in range(k, n):
     # 누적 합을 이용하여 윈도우 내의 합 계산
     window_sum = prefix_sum[right] - prefix_sum[right - k]
     max_sum = max(max_sum, window_sum)
+
 
 print(max_sum)
 

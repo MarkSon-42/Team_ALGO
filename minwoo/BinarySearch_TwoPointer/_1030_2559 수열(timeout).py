@@ -5,6 +5,7 @@
 # n : 2 ~ 100,000
 # k : 1 ~ n
 # elem :  -100 ~ 100
+
 import sys
 
 input = sys.stdin.readline
@@ -16,6 +17,7 @@ days = list(map(int, input().split()))
 left = 0
 right = k - 1
 max_sum = 0
+
 # print(sum(days[left:right + 1]))
 
 while right < n - 1:

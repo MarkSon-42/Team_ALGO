@@ -2,6 +2,7 @@
 # 그러나 온라인에선 도무지 투포인터와 이분탐색에 대한 제대로된
 # 설명을 찾을 수가 없다..
 # mid의 설정 여부말고 차이점이 없는 듯
+
 import sys
 input = sys.stdin.readline
 n = int(input())
