@@ -1,4 +1,5 @@
 # 9:30 ~ 10:10 / 2343 내가 직접 푼 코드 중 가장 깔끔한 정답코드인 것 같음
+# 코드길이는 짧은데, again2가 시간이 덜 들음. 다음 단계로는 again2와 again3 비교해보기!
 import sys
 my_input = sys.stdin.readline
 
