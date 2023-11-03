@@ -1,3 +1,5 @@
+# 인출한 돈이 그날 지출에 충분한지 아닌지 판단하는 함수
+
 def check(K, N, M, expenses):
     withdraws = 0  # 인출 횟수를 추적하는 변수 초기화
     remaining = 0  # 현재 남은 금액을 추적하는 변수 초기화
@@ -33,3 +35,6 @@ if __name__ == "__main__":
 
     result = minimum_K(N, M, expenses)  # minimum_K 함수 호출하여 결과 계산
     print(result)  # 결과 출력
+
+
+# 문제가 너무 안읽히는데 이건 뇌가 거의 파업한 수준..
