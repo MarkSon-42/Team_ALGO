@@ -13,6 +13,8 @@ import sys
 
 input = sys.stdin.readline
 
+
+
 while True:
     try:
         x = int(input().rstrip()) * 10_000_000
