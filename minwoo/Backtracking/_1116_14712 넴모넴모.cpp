@@ -17,7 +17,7 @@ void dfs(int x, int y) {
     }
 
     // 현재 위치가 y 끝인 경우
-    if(y==m) {
+    if(y==m) {g
         y=0;
         x++;
     }
