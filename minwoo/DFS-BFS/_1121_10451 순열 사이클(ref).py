@@ -1,7 +1,10 @@
 # 풀이 1 : dfs 재귀
 
 import sys
-sys.setrecursionlimit(1000)
+sys.setrecursionlimit(10000)
+
+
+
 input = sys.stdin.readline
 
 test_case = int(input())
