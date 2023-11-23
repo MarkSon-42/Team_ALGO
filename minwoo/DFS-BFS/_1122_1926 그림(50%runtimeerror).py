@@ -3,7 +3,6 @@
 # 매우 전형적인 원조격에 가까운 문제
 # 최근에도 카피문제가 계속 출제됨
 
-
 from collections import deque
 
 
