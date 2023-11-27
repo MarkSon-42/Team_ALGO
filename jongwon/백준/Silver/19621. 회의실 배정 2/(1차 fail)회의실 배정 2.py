@@ -9,6 +9,7 @@ for _ in range(n):
     meetings.append(meeting)
 
 standard = meetings[-1][0]
+meetings.sort(key=lambda x: x[0])
 
 dp_table = [0] * (standard+1)
 
