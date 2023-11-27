@@ -2,6 +2,7 @@
 # 안전 거리에 대한 정의
 # 역시 BFS..로 퍼지면서 1인지 검사하며 최대거리를 갱신하면 될듯??
 # 이제 딱 실버 bfs는 바로바로 풀 수 있다..
+
 from collections import deque
 
 n, m = map(int, input().split())
