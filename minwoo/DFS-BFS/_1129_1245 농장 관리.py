@@ -12,8 +12,24 @@ dy = [1, 0, -1, -1, 1, 1, 0, -1]
 
 idx = []
 
-def bfs(x, y, idx):
-    queue = deque([(x, y)])
+def bfs(row, col, idx):
+    queue = deque([(row, col)])
+    visited[row][col] = 1
+    check = [(row, col)]
+    while queue:
+        x, y = queue.popleft()
+        for i in range(8):
+            nx, ny = row + dx[i], col + dy[i]
+            if nx < 0:
+                pass
+            if nx < 0:
+                pass
+            if nx < 0:
+                pass
+            if nx < 0:
+                pass
+
+        idx += check
 
     return 1
 
