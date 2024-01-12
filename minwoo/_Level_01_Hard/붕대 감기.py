@@ -8,6 +8,8 @@
 
 # 공격으로 0이하 되면 죽음 -> -1리턴
 
+# 반례를 못찾겠다.
+
 def solution(bandage, health, attacks):
     t, x, y = bandage[0], bandage[1], bandage[2]
     curr_t, curr_h = 0, health
@@ -41,6 +43,9 @@ def solution(bandage, health, attacks):
 # 테스트 14번이 오답.. 반례가 무엇이 있을까..?
 
 # 아마 조건문 순서에 어딘가 실수가 있는?
+
+# 문제 실행흐름이랑 구현한 실행흐름이 달라서 그런거 같은데
+# 그냥 아예 다시 풀어보자..
 
 # 1 1 1
 # 1
