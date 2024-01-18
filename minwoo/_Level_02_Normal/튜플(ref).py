@@ -44,7 +44,7 @@ def solution3(s):
 
 
 # *** 정규식 풀이
-=
+
 import re
 def solution4(s):
     answer = []
