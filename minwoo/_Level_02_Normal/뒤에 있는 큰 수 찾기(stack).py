@@ -14,3 +14,6 @@ def solution(numbers):
         # 현재 원소를 스택에 저장
         stack.append(numbers[i])
     return result
+
+
+solution([2, 3, 3, 5])
