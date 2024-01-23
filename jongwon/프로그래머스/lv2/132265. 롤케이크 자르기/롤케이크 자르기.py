@@ -1,28 +1,45 @@
-# 문제 접근 : topping의 길이가 최악의 경우에는 10^6이므로 시간 복잡도를 O(N)으로 맞춰야 풀이가 가능했다.
-# 철수(형)에게 모든 토핑을 몰아주고, 하나씩 동생한테 주면서 그때마다의 토핑 가지수를 비교하여 같으면 경우의수를 하나씩 늘려가는 로직 설계
-# 시간 복잡도 : O(N)
-# 시간 복잡도를 맞추기 위해서는 topping에 관한 리스트를 만드는 과정을 한번만 해야 되고 리스트 내의 원소를 처리하는 과정과 비교하는 과정의 시간 복잡도를
-# O(1)으로 맞춰야 해결이 가능하다. 그래서 내장함수 counter를 사용해서 토핑 종류에 대한 개수를 딕셔너리 형태로 만들고 동생한테 add로 하나씩 주면서, 종류의 개수가 0이 되면 종류를 삭제하여 불필요한 반복을 없앴다.
-# 토핑 종류의 수가 같아지면 경우에수 1 증가시켜서 결과 반환
+# 시간 복잡도: O(N)
+# 공간 복잡도: O(N)
 
 from collections import Counter
 
 def solution(topping):
-    elder = Counter(topping)
+    # 정답을 저장할 변수 초기화
+    answer = 0
     
-    younger = set()
-    case = 0
+    # 철수가 가진 토핑의 개수를 세는 Counter 객체 생성
+    chulsu = Counter(topping)
     
-    for i in topping:
-        younger.add(i)
-        elder[i] -= 1
+    # 동생이 가진 토핑을 저장할 집합 초기화
+    brother = set()
+    
+    # 각 토핑에 대해 반복
+    for t in topping:
+        # 철수의 토핑 개수 감소
+        chulsu[t] -= 1
+        
+        # 동생이 가진 토핑 집합에 추가
+        brother.add(t)
+        
+        # 만약 철수가 해당 토핑을 모두 사용했다면 Counter에서 제거
+        if chulsu[t] == 0:
+            chulsu.pop(t)
+            
+        # 현재까지 철수와 동생이 가진 토핑의 종류가 같다면 정답 증가
+        if len(chulsu) == len(brother):
+            answer += 1
+            
+    # 최종적으로 정답 반환
+    return answer
 
-        if elder[i] == 0:
-            del elder[i]
-        if len(younger) == len(elder):
-            case += 1
+# Counter 객체 생성: Counter를 사용하여 topping 배열의 각 토핑별 개수를 셉니다. 이를 통해 철수가 가진 토핑의 개수를 파악합니다.
 
-    return case
+# 반복문: topping 배열을 순회하면서 각 토핑에 대한 처리를 수행합니다.
 
+# 철수의 토핑 개수를 1 감소시키고, 동생이 가진 토핑을 집합에 추가합니다.
 
-print(solution([1, 2, 1, 3, 1, 4, 1, 2]))
+# 만약 철수가 해당 토핑을 모두 사용했다면 Counter에서 해당 토핑을 제거합니다.
+
+# 현재까지 철수와 동생이 가진 토핑의 종류가 같다면 정답을 증가시킵니다.
+
+# 최종적으로 정답을 반환합니다.
