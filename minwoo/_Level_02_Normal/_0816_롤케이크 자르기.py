@@ -1,16 +1,23 @@
-# 자료구조나 어떤 메서드를 쓰는게 맞는거 같은데..(LV 2 50%)
-# len(set()) -> X
-
 def solution(topping):
     answer = 0
-    dic_left = dict()
-    dic_right = dict()
-    for i in topping:
-        if dic_right.get(i) == None:
-            dic_right[i] = 1
+    left = {}
+    for t in topping:
+        if t in left:
+            left[t] += 1
         else:
-            dic_right[i] += 1
+            left[t] = 1
 
+    right = {}
+    for t in topping:
+        if len(right) == len(left):
+            answer += 1
 
-# 이 풀이 no
+        if t not in right:
+            right[t] = 1
 
+        left[t] -= 1
+
+        if left[t] == 0:
+            del left[t]
+
+    return answer
