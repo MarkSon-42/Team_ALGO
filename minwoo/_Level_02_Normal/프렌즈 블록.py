@@ -23,6 +23,7 @@ def solution(m, n, board):
                         board[i+1][j], board[i][j] = board[i][j], '_'
 
     answer = 0
+
     while True:
         to_remove = check()
         if not to_remove:
