@@ -4,7 +4,6 @@
 
 from collections import deque
 
-
 def solution(board):
     n, m = len(board), len(board[0])
     dx, dy = [-1, 0, 1, 0], [0, 1, 0, -1]
