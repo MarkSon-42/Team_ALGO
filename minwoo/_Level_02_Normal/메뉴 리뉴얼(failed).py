@@ -33,7 +33,7 @@ def solution(orders, course):
 
     for num in course:
         for key, value in temp[num].items():
-            if value >=2 and value == max_list[num]:
+            if value >= 2 and value == max_list[num]:
                 answer.append(key)
     answer.sort()
 
