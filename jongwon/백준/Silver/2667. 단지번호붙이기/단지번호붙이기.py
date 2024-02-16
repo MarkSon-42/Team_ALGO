@@ -1,55 +1,47 @@
-# dfs
+import sys
+from collections import deque
 
-n = int(input())
-graph = []
+# BFS 함수 정의
+def bfs(x, y, graph):
+    house = 1  # 단지 내 집의 수를 저장할 변수
+    queue = deque()  # BFS를 위한 큐 생성
+    queue.append([x, y])  # 시작점 추가
+    visited[x][y] = True  # 시작점 방문 표시
 
+    dx = [1, -1, 0, 0]  # 이동할 수 있는 방향 (상, 하, 좌, 우)
+    dy = [0, 0, 1, -1]
+
+    while queue:
+        cur_x, cur_y = queue.popleft()  # 큐에서 현재 위치를 꺼내옴
+
+        for i in range(4):  # 상하좌우 방향에 대해 탐색
+            nx = cur_x + dx[i]
+            ny = cur_y + dy[i]
+            if 0 <= nx < n and 0 <= ny < n and graph[nx][ny] == 1:
+                if not visited[nx][ny]:  # 방문하지 않은 집인 경우
+                    queue.append([nx, ny])  # 다음 위치를 큐에 추가
+                    visited[nx][ny] = True  # 해당 위치를 방문했다고 표시
+                    house += 1  # 집의 수 증가
+                    
+    return house  # 현재 단지의 집 수 반환
+
+
+n = int(sys.stdin.readline())  # 지도의 크기 입력
+
+graph = [list(map(int, sys.stdin.readline().rstrip())) for _ in range(n)]  # 지도 정보 입력
+
+visited = [[False for _ in range(n)] for _ in range(n)]  # 방문 여부를 저장할 2차원 리스트 초기화
+
+houses = []  # 각 단지 내 집의 수를 저장할 리스트
+
+# 모든 지점에 대해 탐색
 for i in range(n):
-    graph.append(list(map(int, input())))
+    for j in range(n):
+        if graph[i][j] == 1 and not visited[i][j]:  # 집이 있고 아직 방문하지 않은 곳인 경우
+            houses.append(bfs(i, j, graph))  # BFS 탐색을 시작하고 집의 수를 리스트에 추가
 
-dx = [-1, 1, 0, 0]
-dy = [0, 0, -1, 1]
+houses.sort()  # 집의 수를 오름차순으로 정렬
 
-
-def dfs(x, y):
-    if x < 0 or x >= n or y < 0 or y >= n:
-        return 0
-    
-    if graph[x][y] == 1:
-        graph[x][y] = 0
-        count = 1  # 현재 집을 카운트
-        for i in range(4):
-            nx = x + dx[i]
-            ny = y + dy[i]
-            count += dfs(nx, ny)  # 인접한 집을 재귀적으로 카운트
-        return count
-    return 0
-
-
-village_cnt = 0
-houses = []
-
-for j in range(n):
-    for k in range(n):
-        house_cnt = dfs(j, k)
-        if house_cnt > 0:
-            houses.append(house_cnt)
-            village_cnt += 1
-
-# 오름차순 정렬
-houses.sort()
-print(village_cnt)
-for l in range(len(houses)):
-    print(houses[l])
-
-
-
-# dfs가 유리한 경우
-# 1. 재귀적인 특징과 백트래킹을 이용하여 모든 경우를 하나씩 전부 탐색하는 경우
-# 2. 그래프의 크기가 클 경우
-# 3. 최적의 답을 찾는 것이 아닌 경우
-# 4. 경로의 특징을 저장해야하는 경우 ex) 경로의 가중치, 이동 과정에서의 제약
-
-# bfs가 유리한 경우
-# 1. 최단 거리, 최단 횟수 구하는 경우
-# 2. 최적의 답을 찾는 경우, bfs에서는 가장 처음 발견되는 답이 최단 거리
-# 3. 탐색의 횟수를 구해야 하는 경우
+print(len(houses))  # 총 단지 수 출력
+for k in range(len(houses)):
+    print(houses[k])  # 각 단지 내 집의 수 출력
