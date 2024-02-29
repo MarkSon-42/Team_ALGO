@@ -24,6 +24,7 @@ def bfs(x, y):
                 if grid[nx][ny] == 1:
                     visited[nx][ny] = visited[xx][yy]
                     q.appendleft((nx, ny))
+                    # 벽일때 큐 앞쪽에 넣고 빈공간이면 큐 뒤쪽에 넣음
                 else:
                     visited[nx][ny] = visited[xx][yy] + 1
                     q.append((nx, ny))
