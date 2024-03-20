@@ -1,31 +1,31 @@
-def solution(park, routes):
-    x, y = 0, 0  # 시작점 초기화
-    w, h = len(park[0]), len(park)
+import itertools
 
-    op = {"N": (-1, 0), "S": (1, 0), "W": (0, -1), "E": (0, 1)}
+# 어떤 학생의 블록은 사용하지 않아도 되며 한 학생당 최대 1개의 블록만을 사용할 수 있다.
+# 합이 h가 되게하는 경우의 수
 
-    # 시작점 S찾기
+# n명의 학생들과 블록 - > 데이터가 2쌍이니 리스트나 딕셔너리를?
 
-    for i in range(h):
-        for j in range(w):
-            if park[i][j] == 'S':
-                x, y = i, j
-                break
+n, m, h = map(int, input().split())
+students = []
+for _ in range(n):
+    students += [list(map(int, input().split()))]
 
-    # routes 명렁어 처리
-    for r in routes:
-        d, n = r.split(" ")
-        dx, dy = x, y
+# i개 블록의 합으로 높이 h를 만드는 경우의 수
 
-        for i in range(int(n)):
-            nx = x + op[d][0]  # d : Key  'N', 'S',..
-            ny = y + op[d][1]
+# permutation?
 
-            if 0 <= nx <= h - 1 and 0 <= ny <= w - 1 and (park[nx][ny] != 'X'):
-                x, y = nx, ny
-            else:
-                x, y = dx, dy
-                break
+cnt = 0
+tmp = ()
+for i in range(m):
+    for j in range(len(students[i])):
+        tmp += itertools.permutations(students[j], i)
+        if sum(tmp) == h:
+            cnt += 1
 
-    return x, y
+# 딱 봐도.. 시간이 매우 걸릴것 같은 코드인데 n,m,h작아서 시도해봄
+
+print(cnt%10007)
+
+
+# 는 아니였고 dp 문제
 
