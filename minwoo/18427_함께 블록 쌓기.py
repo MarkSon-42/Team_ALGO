@@ -4,9 +4,13 @@
 import sys
 input = sys.stdin.readline
 
+
+
 MOD = 10007
 n, m, h = map(int, input().split())
 blocks_list = [[0] + list(map(int, input().split())) for _ in range(n)]
+
+
 
 dp = [[0] * (h + 1) for _ in range(n + 1)]
 dp[0][0] = 1

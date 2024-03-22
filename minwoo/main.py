@@ -1,31 +1,38 @@
-import itertools
+# 문제가 정말 JMT
 
-# 어떤 학생의 블록은 사용하지 않아도 되며 한 학생당 최대 1개의 블록만을 사용할 수 있다.
-# 합이 h가 되게하는 경우의 수
+from collections import deque
 
-# n명의 학생들과 블록 - > 데이터가 2쌍이니 리스트나 딕셔너리를?
+directions = [(0, 1), (0, -1), (1, 0), (-1, 0)]
+answer = 0
 
-n, m, h = map(int, input().split())
-students = []
-for _ in range(n):
-    students += [list(map(int, input().split()))]
+def bfs(field, cost, n):
+    queue = deque([(0, 0)])
 
-# i개 블록의 합으로 높이 h를 만드는 경우의 수
+    cost[0][0] = field[0][0]
 
-# permutation?
+    while queue:
+        x, y = queue.popleft()
 
-cnt = 0
-tmp = ()
-for i in range(m):
-    for j in range(len(students[i])):
-        tmp += itertools.permutations(students[j], i)
-        if sum(tmp) == h:
-            cnt += 1
+        for dx, dy in directions:
+            nx, ny = x + dx, y + dy
 
-# 딱 봐도.. 시간이 매우 걸릴것 같은 코드인데 n,m,h작아서 시도해봄
+            if 0 <= nx < n and 0 <= ny < n:
+                if cost[y][x] + field[ny][nx] < cost[ny][nx]:
+                    cost[ny][nx] = cost[y][x] + field[ny][nx]
+                    queue.append((nx, ny))
 
-print(cnt%10007)
+    return cost[n-1][n-1]
 
+while True:
+    n = int(input())
+    if n == 0:
+        break
 
-# 는 아니였고 dp 문제
+    answer += 1
+
+    field = [list(map(int, input().split())) for _ in range(n)]
+
+    cost = [[1e9 for _ in range(n)] for _ in range(n)]
+
+    print(f"Problem {answer}: {bfs(field, cost, n)}")
 
