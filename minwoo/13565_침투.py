@@ -1,17 +1,12 @@
-import sys
 from collections import deque
 
-input = sys.stdin.readline
-
 m, n = map(int, input().split())
-
 grid = [list(map(int, input().rstrip())) for _ in range(m)]
 
-directions = [(-1, 0), (1, 0), (0, -1), (0, 1)]
-
+directions = [(1, 0), (0, 1), (-1, 0), (0, -1)]
 
 def bfs(x, y):
-    q.deque()
+    q = deque()
     q.append((x, y))
 
     while q:
@@ -28,10 +23,9 @@ def bfs(x, y):
                 grid[nx][ny] = 1
                 q.append((nx, ny))
 
-
 for i in range(n):
     if grid[0][i] == 0:
         bfs(0, i)
 
-print('NO')
 
+print("NO")
