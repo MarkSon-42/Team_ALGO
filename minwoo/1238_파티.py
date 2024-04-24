@@ -11,7 +11,8 @@ def dijkstra(start, end):
 
     while q:
         d, now = heapq.heappop(q)
-        if node[now] < d: continue
+        if node[now] < d:
+            continue
 
         for i in graph[now]:
             dst = i[0]
@@ -34,8 +35,8 @@ for _ in range(m):
 
 t = 0
 for i in range(1, n + 1):
-    if i == x: continue
-    # 이 중에서 최댓값
+    if i == x:
+        continue
     t = max(t, dijkstra(i, x) + dijkstra(x, i))
 
 print(t)

@@ -1,42 +1,21 @@
-# 5972 택배배송
+n = int(input())
 
-n, m = map(int, input().split())
+# dp table : n의 크기에 따라 연산을 하는 횟수의 최솟값을 담는 배열
 
-# 헛간 : 정점
-# 소들의 길 : 간선
-# 소 마리 수 : 가중치 : 거리
+dp = [0] * 100000005
 
-# 가중치 그래프에서 bfs구현하기? 가중치 떄문에 힘들다..
-# 최단거리 다익스트라 쓰면 됨. ( 최소비용, 최소값 등등.. )
-
-
-import heapq
-import sys
-
-INF = sys.maxsize
+# x가 3으로 나누어 떨어지면, 3으로 나눈다.
+#  ~    2  ~
+# 1을 뺀다.
 
 
-def dijkstra(start):
-    q = []
-    heapq.heappush(q, (0, start))
-    dis[start] = 0
-    while q:
-        d, now = heapq.heappop(q)
-        if dis[now] < d:
-            continue
-        for v, w in graph[now]:
-            cost = d + w
-            if cost < dis[v]:
-                dis[v] = cost
-                heapq.heappush(q, (cost, v))
 
 
-N, M = map(int, input().split())
-graph = [[] for _ in range(N + 1)]
-dis = [INF] * (N + 1)
-for _ in range(M):
-    a, b, c = map(int, input().split())
-    graph[a].append((b, c))
-    graph[b].append((a, c))
-dijkstra(1)
-print(dis[N])
+for i in range(2, n + 1):
+    dp[i] = dp[i - 1] + 1
+    if i % 2 == 0:
+        dp[i] = min(dp[i], dp[i // 2] + 1)
+    if i % 3 == 0:
+        dp[i] = min(dp[i], dp[i // 3] + 1)
+
+print(dp[n])
