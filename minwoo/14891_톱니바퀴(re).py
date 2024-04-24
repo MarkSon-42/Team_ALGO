@@ -24,7 +24,7 @@ def right(num, dr):
         gears[num].rotate(dr)
 
 for i in range(k):
-
+    pass
 score = 0
 
 if gears[0][0] == '1':
