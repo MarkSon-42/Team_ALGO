@@ -27,5 +27,4 @@ try:
             print(pivot, i)
             break
 except:
-    pass
-    # print("All islands are connected.")
+    print("All islands are connected.")
