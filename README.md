@@ -1,5 +1,8 @@
 # Team_ALGO 소개
 
+<img width="877" alt="image" src="https://github.com/MarkSon-42/Team_ALGO/assets/84828274/bd3d59a6-c879-4752-870f-ac484e322bf9">
+
+
 ## 스터디원
 
 - [손민우] (운영)
